@@ -54,3 +54,7 @@ null=True, on_delete=models.SET_NULL.)
 
 Finally, adding the InlinePanel to BlogPage.content_panels makes the gallery images available on the
 editing interface for BlogPage.
+
+Since our gallery images are database objects in their own right, we can now query and re-use them independently
+of the blog post body. Let’s define a main_image method, which returns the image from the first gallery item (or
+None if no gallery items exist):
