@@ -31,3 +31,26 @@ somepage.get_children()
 somepage.get_ancestors()
 somepage.get_descendants()
 somepage.get_siblings()
+
+# Images
+Inheriting from Orderable adds a sort_order field to the model, to keep track of the ordering of images in the
+gallery.
+
+The ParentalKey to BlogPage is what attaches the gallery images to a specific page. A ParentalKey works
+similarly to a ForeignKey, but also defines BlogPageGalleryImage as a “child” of the BlogPage model, so
+that it’s treated as a fundamental part of the page in operations like submitting for moderation, and tracking revision
+history.
+
+image is a ForeignKey to Wagtail’s built-in Image model, where the images themselves are stored. This comes
+with a dedicated panel type, ImageChooserPanel, which provides a pop-up interface for choosing an existing
+image or uploading a new one. This way, we allow an image to exist in multiple galleries - effectively, we’ve created
+a many-to-many relationship between pages and images.
+
+Specifying on_delete=models.CASCADE on the foreign key means that if the image is deleted from the system,
+the gallery entry is deleted as well. (In other situations, it might be appropriate to leave the entry in place - for
+example, if an “our staff” page included a list of people with headshots, and one of those photos was deleted, we’d
+rather leave the person in place on the page without a photo. In this case, we’d set the foreign key to blank=True,
+null=True, on_delete=models.SET_NULL.)
+
+Finally, adding the InlinePanel to BlogPage.content_panels makes the gallery images available on the
+editing interface for BlogPage.
