@@ -19,3 +19,15 @@ The get_children() method gets us a list of instances of the Page base class. Wh
 properties of the instances that inherit from the base class, Wagtail provides the specific method that retrieves the
 actual BlogPage record. While the “title” field is present on the base Page model, “intro” is only present on the
 BlogPage model, so we need .specific to access it.
+
+# Given a page object 'somepage':
+MyModel.objects.descendant_of(somepage)
+child_of(page) / not_child_of(somepage)
+ancestor_of(somepage) / not_ancestor_of(somepage)
+parent_of(somepage) / not_parent_of(somepage)
+sibling_of(somepage) / not_sibling_of(somepage)
+# ... and ...
+somepage.get_children()
+somepage.get_ancestors()
+somepage.get_descendants()
+somepage.get_siblings()
