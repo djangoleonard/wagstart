@@ -67,3 +67,14 @@ Migrate this in, then create a new BlogTagIndexPage in the admin. You’ll proba
 page/view under Homepage, parallel to your Blog index. Give it the slug “tags” on the Promote tab.
 Access /tags and Django will tell you what you probably already knew: you need to create a template
 blog/blog_tag_index_page.html:
+
+First, we define a BlogCategory model. A category is not a page in its own right, and so we define it as a standard
+Django models.Model rather than inheriting from Page. Wagtail introduces the concept of “snippets” for reusable
+pieces of content that need to be managed through the admin interface, but do not exist as part of the page tree
+themselves; a model can be registered as a snippet by adding the @register_snippet decorator. All the field
+types we’ve used so far on pages can be used on snippets too - here we’ll give each category an icon image as well as
+a name. Add to blog/models.py:
+
+Note: Note that we are using panels rather than content_panels here - since snippets generally have no need
+for fields such as slug or publish date, the editing interface for them is not split into separate ‘content’ / ‘promote’ /
+‘settings’ tabs as standard, and so there is no need to distinguish between ‘content panels’ and ‘promote panels’.

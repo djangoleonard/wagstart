@@ -1,5 +1,7 @@
 from __future__ import absolute_import, unicode_literals
 
+# New imports added for forms and ParentalManyToManyField
+from django import forms
 from django.db import models
 
 # New imports added for ClusterTaggableManager, TaggedItemBase, MultiFieldPanel
@@ -12,6 +14,7 @@ from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
+from wagtail.wagtailsnippets.models import register_snippet
 from wagtail.wagtailsearch import index
 
 
@@ -79,7 +82,6 @@ class BlogPageGalleryImage(Orderable):
 
 
 class BlogTagIndexPage(Page):
-
     def get_context(self, request, *args, **kwargs):
         # Filter by tag
         tag = request.GET.get('tag')
@@ -88,3 +90,22 @@ class BlogTagIndexPage(Page):
         context = super(BlogTagIndexPage, self).get_context(request)
         context['blogpages'] = blogpages
         return context
+
+
+@register_snippet
+class BlogCategory(models.Model):
+    name = models.CharField(max_length=255)
+    icon = models.ForeignKey(
+        'wagtailimages.Image', null=True, blank=True,
+        on_delete=models.SET_NULL, related_name='+'
+    )
+    panels = [
+        FieldPanel('name'),
+        ImageChooserPanel('icon'),
+    ]
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'blog categories'
