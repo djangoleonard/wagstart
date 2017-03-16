@@ -58,3 +58,12 @@ editing interface for BlogPage.
 Since our gallery images are database objects in their own right, we can now query and re-use them independently
 of the blog post body. Let’s define a main_image method, which returns the image from the first gallery item (or
 None if no gallery items exist):
+
+
+Note that this Page-based model defines no fields of its own. Even without fields, subclassing Page makes it a part of
+theWagtail ecosystem, so that you can give it a title and URL in the admin, and so that you can manipulate its contents
+by returning a queryset from its get_context() method.
+Migrate this in, then create a new BlogTagIndexPage in the admin. You’ll probably want to create the new
+page/view under Homepage, parallel to your Blog index. Give it the slug “tags” on the Promote tab.
+Access /tags and Django will tell you what you probably already knew: you need to create a template
+blog/blog_tag_index_page.html:

@@ -5,7 +5,7 @@ from django.db import models
 # New imports added for ClusterTaggableManager, TaggedItemBase, MultiFieldPanel
 
 from modelcluster.fields import ParentalKey
-from modelcluster.tags import ClusterTaggableManager
+from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 
 from wagtail.wagtailcore.models import Page, Orderable
@@ -76,3 +76,15 @@ class BlogPageGalleryImage(Orderable):
         ImageChooserPanel('image'),
         FieldPanel('caption'),
     ]
+
+
+class BlogTagIndexPage(Page):
+
+    def get_context(self, request, *args, **kwargs):
+        # Filter by tag
+        tag = request.GET.get('tag')
+        blogpages = BlogPage.objects.filter(tags__name=tag)
+        # Update template context
+        context = super(BlogTagIndexPage, self).get_context(request)
+        context['blogpages'] = blogpages
+        return context
