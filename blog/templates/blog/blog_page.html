@@ -5,7 +5,18 @@
     <h1>{{ page.title }}</h1>
     <p class="meta">{{ page.date }}</p>
     <div class="intro">{{ page.intro }}</div>
-    {{ page.body|richtext }}
+    <p>{{ page.body|richtext }}</p>
+    {% if page.tags.all.count %}
+        <p>There are {{ page.tags.all.count }} Tags</p>
+        <div class="tags">
+            <h3>Tags</h3>
+            {% for tag in page.tags.all %}
+                <a href="{% slugurl 'tags' %}?tag={{ tag }}">
+                    <button type="button">{{ tag }}</button>
+                </a>
+            {% endfor %}
+        </div>
+    {% endif %}
     {% for item in page.gallery_images.all %}
         <div style="float: left; margin: 10px">
             {% image item.image fill-320x240 %}
