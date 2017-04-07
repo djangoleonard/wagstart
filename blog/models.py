@@ -22,6 +22,7 @@ from wagtail.wagtailsearch import index
 
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
+    api_fields = ['intro']
 
     def get_context(self, request, *args, **kwargs):
         # Update context to include only published posts, ordered by reverse-chron
@@ -45,6 +46,8 @@ class BlogPage(Page):
     body = RichTextField(blank=True)
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
     categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
+
+    api_fields = ['date', 'intro', 'body', 'tags', 'categories']
 
     # ... (Keep the main_image method and search_fields definition)
 
@@ -77,6 +80,9 @@ class BlogPageGalleryImage(Orderable):
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
     caption = models.CharField(blank=True, max_length=250)
+
+    api_fields = ['page', 'image', 'caption']
+
     panels = [
         ImageChooserPanel('image'),
         FieldPanel('caption'),
@@ -101,6 +107,9 @@ class BlogCategory(models.Model):
         'wagtailimages.Image', null=True, blank=True,
         on_delete=models.SET_NULL, related_name='+'
     )
+
+    api_fields = ['name', 'icon']
+
     panels = [
         FieldPanel('name'),
         ImageChooserPanel('icon'),
