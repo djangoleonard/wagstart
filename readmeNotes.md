@@ -59,7 +59,6 @@ Since our gallery images are database objects in their own right, we can now que
 of the blog post body. Let’s define a main_image method, which returns the image from the first gallery item (or
 None if no gallery items exist):
 
-
 Note that this Page-based model defines no fields of its own. Even without fields, subclassing Page makes it a part of
 theWagtail ecosystem, so that you can give it a title and URL in the admin, and so that you can manipulate its contents
 by returning a queryset from its get_context() method.
@@ -78,3 +77,9 @@ a name. Add to blog/models.py:
 Note: Note that we are using panels rather than content_panels here - since snippets generally have no need
 for fields such as slug or publish date, the editing interface for them is not split into separate ‘content’ / ‘promote’ /
 ‘settings’ tabs as standard, and so there is no need to distinguish between ‘content panels’ and ‘promote panels’.
+
+Migrate this change in, and create a few categories through the Snippets area which now appears in the admin menu.
+We can now add categories to the BlogPage model, as a many-to-many field. The field type we use for this is
+ParentalManyToManyField - this is a variant of the standard Django ManyToManyField which ensures that
+the chosen objects are correctly stored against the page record in the revision history, in much the same way that
+ParentalKey replaces ForeignKey for one-to-many relations.

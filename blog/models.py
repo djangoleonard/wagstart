@@ -6,7 +6,7 @@ from django.db import models
 
 # New imports added for ClusterTaggableManager, TaggedItemBase, MultiFieldPanel
 
-from modelcluster.fields import ParentalKey
+from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 
@@ -22,6 +22,7 @@ from wagtail.wagtailsearch import index
 
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
+    api_fields = ['intro']
 
     def get_context(self, request, *args, **kwargs):
         # Update context to include only published posts, ordered by reverse-chron
@@ -44,6 +45,9 @@ class BlogPage(Page):
     intro = models.CharField(max_length=250)
     body = RichTextField(blank=True)
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
+    categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
+
+    api_fields = ['date', 'intro', 'body', 'tags', 'categories']
 
     # ... (Keep the main_image method and search_fields definition)
 
@@ -62,6 +66,7 @@ class BlogPage(Page):
         MultiFieldPanel([
             FieldPanel('date'),
             FieldPanel('tags'),
+            FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
         ], heading="Blog information"),
         FieldPanel('intro'),
         FieldPanel('body', classname="full"),
@@ -75,6 +80,9 @@ class BlogPageGalleryImage(Orderable):
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
     caption = models.CharField(blank=True, max_length=250)
+
+    api_fields = ['page', 'image', 'caption']
+
     panels = [
         ImageChooserPanel('image'),
         FieldPanel('caption'),
@@ -99,6 +107,9 @@ class BlogCategory(models.Model):
         'wagtailimages.Image', null=True, blank=True,
         on_delete=models.SET_NULL, related_name='+'
     )
+
+    api_fields = ['name', 'icon']
+
     panels = [
         FieldPanel('name'),
         ImageChooserPanel('icon'),
