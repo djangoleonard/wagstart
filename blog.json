@@ -1,0 +1,432 @@
+[
+{
+    "model": "blog.blogindexpage",
+    "pk": 4,
+    "fields": {
+        "intro": "<p><b>Welcome</b> to Blog Index Page<br/></p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 10,
+    "fields": {
+        "intro": "<p>Vas\u0131talar</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 11,
+    "fields": {
+        "intro": "<p>Otomobil</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 12,
+    "fields": {
+        "intro": "<p>Arazi, SUV &amp; Pick-up</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 13,
+    "fields": {
+        "intro": "<p>Motosiklet<br/></p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 14,
+    "fields": {
+        "intro": "<p>Minivan &amp; Panelvan</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 15,
+    "fields": {
+        "intro": "<p>Alfa Romeo</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 16,
+    "fields": {
+        "intro": "<p>Mercedes - Benz</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 17,
+    "fields": {
+        "intro": "<p>Renault</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 18,
+    "fields": {
+        "intro": "<p>Clio<br/></p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 19,
+    "fields": {
+        "intro": "<p>Fluence</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 20,
+    "fields": {
+        "intro": "<p>1.5 dCi</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 21,
+    "fields": {
+        "intro": "<p><br/></p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 22,
+    "fields": {
+        "intro": "<p>Alize</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 23,
+    "fields": {
+        "intro": "<p>Authentique</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 24,
+    "fields": {
+        "intro": "<p>Joy</p>"
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 25,
+    "fields": {
+        "intro": ""
+    }
+},
+{
+    "model": "blog.blogindexpage",
+    "pk": 29,
+    "fields": {
+        "intro": ""
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 7,
+    "fields": {
+        "tag": 8,
+        "content_object": 8
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 8,
+    "fields": {
+        "tag": 11,
+        "content_object": 8
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 9,
+    "fields": {
+        "tag": 8,
+        "content_object": 5
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 10,
+    "fields": {
+        "tag": 9,
+        "content_object": 5
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 11,
+    "fields": {
+        "tag": 7,
+        "content_object": 5
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 12,
+    "fields": {
+        "tag": 8,
+        "content_object": 6
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 13,
+    "fields": {
+        "tag": 9,
+        "content_object": 6
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 14,
+    "fields": {
+        "tag": 10,
+        "content_object": 6
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 15,
+    "fields": {
+        "tag": 13,
+        "content_object": 26
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 16,
+    "fields": {
+        "tag": 14,
+        "content_object": 27
+    }
+},
+{
+    "model": "blog.blogpagetag",
+    "pk": 17,
+    "fields": {
+        "tag": 15,
+        "content_object": 28
+    }
+},
+{
+    "model": "blog.blogpage",
+    "pk": 5,
+    "fields": {
+        "date": "2017-03-16",
+        "intro": "First Post Read",
+        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tellus \nnunc, suscipit at porttitor et, vestibulum vel lacus. Suspendisse \npotenti. Vivamus sed viverra risus. Nam condimentum ligula at dui \nplacerat, tempor egestas risus efficitur. Curabitur non rhoncus erat, eu\n varius arcu. Donec imperdiet arcu blandit augue aliquet, tristique \naliquet diam laoreet. Nulla tincidunt maximus vulputate. Ut tristique \naccumsan lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing \nelit. Class aptent taciti sociosqu ad litora torquent per conubia \nnostra, per inceptos himenaeos. Nullam scelerisque in lectus non congue.\n Praesent et mi neque.\n</p>",
+        "categories": [
+            1
+        ]
+    }
+},
+{
+    "model": "blog.blogpage",
+    "pk": 6,
+    "fields": {
+        "date": "2017-03-15",
+        "intro": "Second Post Read",
+        "body": "<p>Aliquam auctor quam nec consectetur gravida. Fusce in imperdiet ipsum, \nsed dictum mauris. Nulla velit ligula, mattis eget interdum ultricies, \nvenenatis at quam. Ut fermentum lacus at nisi pellentesque interdum. Sed\n vitae sodales mi. Curabitur facilisis sapien quis metus porta bibendum.\n Morbi ullamcorper accumsan varius. Proin ultrices, mi sit amet \nsollicitudin tempus, tellus nunc auctor libero, sit amet aliquam neque \nnisl ac ligula. Maecenas id ante non mi porttitor facilisis quis non \nturpis. Maecenas congue, massa eu dignissim accumsan, libero arcu \npharetra tortor, vitae varius eros dui nec lacus.\n</p>",
+        "categories": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "blog.blogpage",
+    "pk": 8,
+    "fields": {
+        "date": "2017-03-16",
+        "intro": "Third Post Read",
+        "body": "<p>Ut convallis arcu mauris, vel varius nisl consequat at. Morbi eu nibh \ntempor nibh tempor mattis non vitae elit. Integer at vulputate massa. \nDonec vitae porttitor mauris, vitae interdum metus. Nam a ultricies \nnunc. Nam lorem mi, facilisis nec sem vitae, imperdiet cursus dui. \nQuisque est tortor, rutrum quis nisl ut, hendrerit posuere sem.\n</p>",
+        "categories": []
+    }
+},
+{
+    "model": "blog.blogpage",
+    "pk": 26,
+    "fields": {
+        "date": "2017-04-07",
+        "intro": "FULL + FULL FLUENCE NAV\u0130GASYON + SUNRUF + DER\u0130 D\u00d6\u015eEME",
+        "body": "<p>FULL + FULL FLUENCE NAV\u0130GASYON + SUNRUF + DER\u0130 D\u00d6\u015eEME</p>",
+        "categories": []
+    }
+},
+{
+    "model": "blog.blogpage",
+    "pk": 27,
+    "fields": {
+        "date": "2017-04-08",
+        "intro": "KAREN RENAULT'DAN 2011 MODEL FLUENCE 1.5 PR\u0130V\u0130LEGE DC",
+        "body": "<p>Ara\u00e7 gayet diri ve temizdir.  Hasar kayd\u0131 yoktur. Ara\u00e7ta ufak bir kaza \nsonucu tampon de\u011fi\u015fmi\u015ftir. 16.01.2019 tarihine kadar muayenesi vard\u0131r.</p>",
+        "categories": []
+    }
+},
+{
+    "model": "blog.blogpage",
+    "pk": 28,
+    "fields": {
+        "date": "2017-04-08",
+        "intro": "2011 MODEL D\u0130ZEL C\u0130LO SERV\u0130S BAKIMLI",
+        "body": "ARA\u00c7 MASRAFSIZDIR SERV\u0130S BAKIMLIDIR\u00a0<br/>5 par\u00e7a boyal\u0131\u00a0<br/><p>TRAMERDE par\u00e7a par\u00e7a 8 bin\u00a0tl\u00a0hasar kayd\u0131 vard\u0131r </p><p></p>",
+        "categories": []
+    }
+},
+{
+    "model": "blog.blogpage",
+    "pk": 30,
+    "fields": {
+        "date": "2017-04-08",
+        "intro": "SUAT PLAZA'DAN 2013 FLUANCE1.6 130 Ps \u0130CON 6 \u0130LER\u0130 56.000",
+        "body": "<p><b><i>\u00a0F\u0130RMAMIZ\n S\u0130ZE G\u00dcVENL\u0130 VE HIZLI SATI\u015e \u0130MKANI SUNMAKTADIR. SUAT AUTO'DA BULUNAN \nT\u00dcM ARA\u00c7LAR 103 NOKTA EKSPERT\u0130Z GARANT\u0130S\u0130NDED\u0130R PROFESYONEL KADROMUZLA \nVE T\u00dcM A\u00c7IKLI\u011eIMIZLA M\u00dc\u015eTER\u0130LER\u0130M\u0130ZE H\u0130ZMET VERMEKTEN MUTLULUK DUYARIZ.</i></b></p>",
+        "categories": []
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 1,
+    "fields": {
+        "sort_order": 0,
+        "page": 6,
+        "image": 2,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 2,
+    "fields": {
+        "sort_order": 1,
+        "page": 6,
+        "image": 1,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 3,
+    "fields": {
+        "sort_order": 2,
+        "page": 6,
+        "image": 3,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 4,
+    "fields": {
+        "sort_order": 0,
+        "page": 5,
+        "image": 4,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 5,
+    "fields": {
+        "sort_order": 1,
+        "page": 5,
+        "image": 5,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 6,
+    "fields": {
+        "sort_order": 2,
+        "page": 5,
+        "image": 6,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 7,
+    "fields": {
+        "sort_order": 0,
+        "page": 8,
+        "image": 5,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 8,
+    "fields": {
+        "sort_order": 0,
+        "page": 26,
+        "image": 7,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 9,
+    "fields": {
+        "sort_order": 0,
+        "page": 27,
+        "image": 5,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 10,
+    "fields": {
+        "sort_order": 1,
+        "page": 27,
+        "image": 2,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 11,
+    "fields": {
+        "sort_order": 0,
+        "page": 28,
+        "image": 6,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogpagegalleryimage",
+    "pk": 12,
+    "fields": {
+        "sort_order": 0,
+        "page": 30,
+        "image": 6,
+        "caption": ""
+    }
+},
+{
+    "model": "blog.blogtagindexpage",
+    "pk": 7,
+    "fields": {}
+},
+{
+    "model": "blog.blogcategory",
+    "pk": 1,
+    "fields": {
+        "name": "Blog",
+        "icon": 7
+    }
+},
+{
+    "model": "blog.blogcategory",
+    "pk": 2,
+    "fields": {
+        "name": "Events",
+        "icon": 6
+    }
+}
+]

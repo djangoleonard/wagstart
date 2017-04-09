@@ -2,6 +2,7 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 {% block body_class %}template-blogpage{% endblock %}
 {% block content %}
+    <div class="col-md-9">
     <h1>{{ page.title }}</h1>
     <p class="meta">{{ page.date }}</p>
     {% with categories=page.categories.all %}
@@ -37,4 +38,6 @@
         </div>
     {% endfor %}
     <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
+    </div>
+    <div class="col-md-3">Sidebar</div>
 {% endblock %}
