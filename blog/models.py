@@ -27,9 +27,18 @@ class BlogIndexPage(Page):
     def get_context(self, request, *args, **kwargs):
         # Update context to include only published posts, ordered by reverse-chron
         context = super(BlogIndexPage, self).get_context(request)
-        blogpages = self.get_children().live().order_by('-first_published_at')
+        blogpages = BlogPage.objects.live().descendant_of(self)
+        blogpagesspe = BlogPage.objects.live().descendant_of(self)
+        blogparent = BlogIndexPage.objects.live().parent_of(self)    #.order_by('-name')
+        blogdescen = BlogIndexPage.objects.live().child_of(self)
+        # blogchild = BlogIndexPage.objects.live().descendant_of(self)
         context['blogpages'] = blogpages
+        context['blogparent'] = blogparent
+        context['blogdescen'] = blogdescen
+        context['blogpagesspe'] = blogpagesspe
         return context
+
+    subpage_types = ['BlogPage']
 
     content_panels = Page.content_panels + [
         FieldPanel('intro', classname="full")
@@ -72,6 +81,13 @@ class BlogPage(Page):
         FieldPanel('body', classname="full"),
         InlinePanel('gallery_images', label="Gallery images"),
     ]
+
+    # Specifies parent to BlogPage as being BlogIndexPages
+    parent_page_types = ['BlogIndexPage']
+
+    # Specifies what content types can exist as children of BlogPage.
+    # Empty list means that no child content types are allowed.
+    subpage_types = []
 
 
 class BlogPageGalleryImage(Orderable):

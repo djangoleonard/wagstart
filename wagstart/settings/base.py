@@ -27,6 +27,8 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 INSTALLED_APPS = [
     'home',
     'search',
+    'blog',
+    # 'cat',
 
     'wagtail.wagtailforms',
     'wagtail.wagtailredirects',
@@ -50,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+
 ]
 
 MIDDLEWARE = [
@@ -143,3 +145,10 @@ SECRET_KEY = '6xz8ajb2pwe%@%+xka)id&w4h7qe^999%+_or^(-^@)zm6spi-'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 WAGTAILAPI_BASE_URL = 'localhost:8000'
+
+############
+# FIXTURES #
+############
+
+# The list of directories to search for fixtures
+FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures')]

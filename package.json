@@ -1,0 +1,23 @@
+{
+  "name": "wagstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djangoleonard/wagstart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djangoleonard/wagstart/issues"
+  },
+  "homepage": "https://github.com/djangoleonard/wagstart#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^1.12.4"
+  }
+}
