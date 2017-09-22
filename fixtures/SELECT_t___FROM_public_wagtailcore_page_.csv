@@ -1,0 +1,15 @@
+id,path,depth,numchild,title,slug,live,has_unpublished_changes,url_path,seo_title,show_in_menus,search_description,go_live_at,expire_at,expired,content_type_id,owner_id,locked,latest_revision_created_at,first_published_at
+1,0001,1,1,Root,root,true,false,/,,false,,,,false,1,,false,,
+3,00010001,2,1,Homepage,home,true,false,/home/,,false,,,,false,3,,false,,
+4,000100010001,3,1,Vasıta,vasita,true,false,/home/vasita/,Vasıta,false,Vasıta,,,false,9,1,false,2017-04-15 07:51:52.320000,2017-04-15 07:51:52.375000
+5,0001000100010001,4,4,Otomobil,otomobil,true,false,/home/vasita/otomobil/,Otomobil,false,Otomobil,,,false,9,1,false,2017-04-15 07:52:35.817000,2017-04-15 07:52:35.856000
+6,00010001000100010003,5,2,Renault,renault,true,false,/home/vasita/otomobil/renault/,Renault,false,Renault,,,false,9,1,false,2017-04-15 07:53:18.291000,2017-04-15 07:53:18.336000
+7,000100010001000100030002,6,3,Clio,clio,true,false,/home/vasita/otomobil/renault/clio/,Clio,false,Clio,,,false,9,1,false,2017-04-15 07:54:11.514000,2017-04-15 07:54:11.569000
+8,0001000100010001000300020001,7,0,2011 MODEL DİZEL CİLO SERVİS BAKIMLI,2011-model-dizel-cilo-servis-bakimli,true,false,/home/vasita/otomobil/renault/clio/2011-model-dizel-cilo-servis-bakimli/,,false,,,,false,11,1,false,2017-04-15 07:56:34.962000,2017-04-15 07:56:35.039000
+9,000100010001000100030003,6,1,Fluence,fluence,true,false,/home/vasita/otomobil/renault/fluence/,Fluence,false,Fluence,,,false,9,1,false,2017-04-15 07:57:28.358000,2017-04-15 07:57:28.403000
+10,0001000100010001000300030001,7,0,KAREN RENAULT'DAN 2011 MODEL FLUENCE 1.5 PRİVİLEGE DCİ,karen-renaultdan-2011-model-fluence-15-privilege-dci,true,false,/home/vasita/otomobil/renault/fluence/karen-renaultdan-2011-model-fluence-15-privilege-dci/,,false,,,,false,11,1,false,2017-04-15 08:00:00.797000,2017-04-15 08:00:00.860000
+11,0001000100010001000300020002,7,0,SUAT PLAZA'DAN 2013 Clio .6 130 Ps İCON 6 İLERİ 56.000,suat-plazadan-2013-clio-6-130-ps-icon-6-ileri-56000,true,false,/home/vasita/otomobil/renault/clio/suat-plazadan-2013-clio-6-130-ps-icon-6-ileri-56000/,,false,,,,false,11,1,false,2017-04-15 08:06:11.581000,2017-04-15 08:06:11.656000
+12,0001000100010001000300020003,7,0,Ahmet RENAULT'DAN 2011 MODEL Clio 1.5,ahmet-renaultdan-2011-model-clio-15,true,false,/home/vasita/otomobil/renault/clio/ahmet-renaultdan-2011-model-clio-15/,,false,,,,false,11,1,false,2017-04-15 08:10:18.914000,2017-04-15 08:10:18.981000
+13,00010001000100010002,5,0,Ford,ford,true,false,/home/vasita/otomobil/ford/,Ford,false,Ford,,,false,9,1,false,2017-04-15 08:11:36.386000,2017-04-15 08:11:36.441000
+15,00010001000100010001,5,0,Alfa Romeo,alfa-romeo,true,false,/home/vasita/otomobil/alfa-romeo/,Alfa Romeo,true,Alfa Romeo,,,false,9,1,false,2017-04-15 08:36:39.996000,2017-04-15 08:36:40.050000
+16,00010001000100010004,5,0,Crysler,crysler,true,false,/home/vasita/otomobil/crysler/,Crysler,true,Crysler,,,false,9,1,false,2017-04-15 08:49:35.884000,2017-04-15 08:49:35.937000

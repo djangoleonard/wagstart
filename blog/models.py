@@ -38,7 +38,7 @@ class BlogIndexPage(Page):
         context['blogpagesspe'] = blogpagesspe
         return context
 
-    subpage_types = ['BlogPage']
+    # subpage_types = ['BlogPage']
 
     content_panels = Page.content_panels + [
         FieldPanel('intro', classname="full")
@@ -83,11 +83,11 @@ class BlogPage(Page):
     ]
 
     # Specifies parent to BlogPage as being BlogIndexPages
-    parent_page_types = ['BlogIndexPage']
+    # parent_page_types = ['BlogIndexPage']
 
     # Specifies what content types can exist as children of BlogPage.
     # Empty list means that no child content types are allowed.
-    subpage_types = []
+    # subpage_types = []
 
 
 class BlogPageGalleryImage(Orderable):

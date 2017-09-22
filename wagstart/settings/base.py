@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'wagtail.wagtailadmin',
     'wagtail.wagtailcore',
     'wagtail.api.v2',
-
+    'treebeard',
     'modelcluster',
     'taggit',
 
@@ -97,9 +97,20 @@ WSGI_APPLICATION = 'wagstart.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db2.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'wagi01',
+#         'USER': 'postgres',
+#         'PASSWORD': '63463825',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
